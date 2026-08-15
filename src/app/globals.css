@@ -1,0 +1,272 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+@theme {
+  --color-surface: #141414;
+  --color-surface-raised: #1a1a1a;
+  --color-surface-sunken: #0d0d0d;
+  --color-sidebar: #101010;
+  --color-edge: #2a2a2a;
+  --color-edge-strong: #3a3a3a;
+  --color-ink: #f2f2f2;
+  --color-ink-soft: #a6a6a6;
+  --color-ink-muted: #888888;
+  --color-ink-faint: #5a5a5a;
+  --color-primary: #39ff6a;
+  --color-primary-soft: #1d5430;
+  --color-primary-foreground: #04140b;
+  --color-warning: #f5b03c;
+  --color-danger: #ff6b6b;
+  --color-amber: #f5b03c;
+  --color-steam: #1b2838;
+  --color-steam-accent: #66c0f4;
+  --color-roblox: #111111;
+  --color-roblox-accent: #e2231a;
+  --color-xbox: #107c10;
+  --color-xbox-accent: #9bf00b;
+  --color-playstation: #003087;
+  --color-playstation-accent: #0070d1;
+  --color-epic: #121212;
+  --color-epic-accent: #7d7d7d;
+  --color-discord: #5865f2;
+  --color-violet: #a78bfa;
+  --color-blue: #60a5fa;
+  --color-cyan: #22d3ee;
+  --color-pink: #f472b6;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+
+  --shadow-glow-primary: 0 0 24px 0 rgb(57 255 106 / 0.25);
+  --shadow-glow-soft: 0 8px 40px -12px rgb(0 0 0 / 0.6);
+  --shadow-card: 0 1px 0 0 rgb(255 255 255 / 0.03) inset, 0 10px 40px -12px rgb(0 0 0 / 0.5);
+}
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #f2f2f2;
+}
+
+/* Dark-only product surface (Sunk is a dark-first experience) */
+:root {
+  color-scheme: dark;
+}
+
+* {
+  border-color: var(--color-edge);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--color-ink);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgb(57 255 106 / 0.22);
+  color: var(--color-ink);
+}
+
+/* ---------- Scrollbar ---------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2a transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---------- Focus rings ---------- */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- Utility: grid & noise backgrounds ---------- */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.bg-grid-fade {
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+}
+
+.noise::after {
+  display: none;
+}
+
+/* ---------- Text helpers ---------- */
+.text-gradient {
+  background: linear-gradient(100deg, #39ff6a 0%, #22d3ee 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.text-gradient-green {
+  background: linear-gradient(120deg, #39ff6a, #7dffa0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Glass ---------- */
+.glass {
+  background: rgb(20 20 20 / 0.72);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+}
+
+/* ---------- Skeleton shimmer ---------- */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.06), transparent);
+  animation: skeleton-shimmer 1.6s infinite;
+}
+@keyframes skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ---------- Glow ---------- */
+.glow-primary {
+  box-shadow: 0 0 24px 0 rgb(57 255 106 / 0.25);
+}
+.glow-soft {
+  box-shadow: 0 8px 40px -12px rgb(0 0 0 / 0.6);
+}
+
+/* ---------- Animated gradient ring ---------- */
+@property --spin-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes spin-angle {
+  to {
+    --spin-angle: 360deg;
+  }
+}
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--spin-angle),
+    transparent 0%,
+    rgb(57 255 106 / 0.6) 20%,
+    transparent 40%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: spin-angle 6s linear infinite;
+  pointer-events: none;
+}
+
+/* ---------- Marquee ---------- */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}
+
+/* ---------- Float ---------- */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.animate-float {
+  animation: float-y 7s ease-in-out infinite;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .gradient-border::before {
+    animation: none;
+  }
+  .animate-marquee {
+    animation-duration: 28s !important;
+    animation-iteration-count: infinite !important;
+  }
+}

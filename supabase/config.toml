@@ -1,0 +1,28 @@
+# Supabase CLI configuration for Sunk.
+# Generate keys with `supabase gen keys` (or use the dashboard).
+
+project_id = "sunk"
+
+[db]
+port = 54322
+
+[api]
+port = 54321
+schemas = ["public", "graphql_public"]
+
+[studio]
+port = 54323
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/callback"]
+jwt_expiry = 3600
+enable_signup = true
+email = { enable_signup = true, double_confirm_changes = false, enable_confirmations = true }
+
+[auth.external]
+enabled = true
+google = { enabled = true, client_id = "", client_secret = "" }
+discord = { enabled = true, client_id = "", client_secret = "" }
+steam = { enabled = false }
