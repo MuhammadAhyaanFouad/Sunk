@@ -2,8 +2,9 @@
   <rect width="24" height="24" rx="6" fill="#0A0A0A"/>
   <path
     fill-rule="evenodd"
-    d="M6 5.5h12v13.5H6V5.5ZM18 8.1h-2.6v4.6H18V8.1ZM6 15.3h2.6v1.1H6v-1.1Z"
+    d="M5 4.5h12v15H5V4.5ZM17 7.7h-3.2v5.2H17V7.7ZM5 16.3h3.2v3.2H5v-3.2Z"
     fill="#EDEDED"
   />
-  <circle cx="20.3" cy="17.8" r="2.3" fill="#39FF6A"/>
+  <circle cx="19.5" cy="17.9" r="2.4" fill="#39FF6A"/>
+  <rect x="1" y="1" width="22" height="22" rx="6" fill="none" stroke="#2A2A2A" stroke-width="1"/>
 </svg>
