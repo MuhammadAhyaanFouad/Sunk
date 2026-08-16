@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <rect width="24" height="24" rx="6" fill="#0A0A0A"/>
-  <path
-    fill-rule="evenodd"
-    d="M5 4.5h12v15H5V4.5ZM17 7.7h-3.2v5.2H17V7.7ZM5 16.3h3.2v3.2H5v-3.2Z"
-    fill="#EDEDED"
-  />
-  <circle cx="19.5" cy="17.9" r="2.4" fill="#39FF6A"/>
-  <rect x="1" y="1" width="22" height="22" rx="6" fill="none" stroke="#2A2A2A" stroke-width="1"/>
+  <rect width="24" height="24" rx="6" fill="#39FF6A"/>
+  <text
+    x="12"
+    y="17.4"
+    text-anchor="middle"
+    font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+    font-size="15"
+    font-weight="900"
+    letter-spacing="-0.5"
+    fill="#0A0A0A"
+  >S<tspan fill="#0A0A0A">.</tspan></text>
 </svg>
