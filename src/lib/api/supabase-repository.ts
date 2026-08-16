@@ -632,7 +632,7 @@ export class SupabaseRepository implements SunkRepository {
   }
 
   async upgradeToPremium(): Promise<BillingCustomer> {
-    throw new Error("Premium upgrades are handled server-side through Payoneer.");
+    throw new Error("Premium upgrades are handled server-side.");
   }
 
   async resetDemoData(): Promise<void> {

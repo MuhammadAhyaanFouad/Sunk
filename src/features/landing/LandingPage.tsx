@@ -281,7 +281,7 @@ export function LandingPage() {
             <p className="mt-4 font-mono text-[40px] font-semibold text-ink">
               $4<span className="text-[16px] text-ink-faint">/mo</span>
             </p>
-            <p className="text-[12px] text-ink-faint">billed via Payoneer</p>
+            <p className="text-[12px] text-ink-faint">billed securely</p>
             <ul className="mt-6 space-y-2.5">
               {["Unlimited connected platforms", "Full Insights engine & Wrapped", "No-spend challenges & streaks", "All Roast levels, all the time", "Priority support & early features"].map((li) => (
                 <li key={li} className="flex items-center gap-2.5 text-[13.5px] text-ink-soft">
@@ -350,7 +350,7 @@ export function LandingPage() {
             <Logo />
           </div>
           <div className="flex items-center gap-6 text-[12.5px] text-ink-faint">
-            <span className="flex items-center gap-1.5"><Lock className="size-3.5" /> Payments by Payoneer</span>
+            <span className="flex items-center gap-1.5"><Lock className="size-3.5" /> Payments secured</span>
             <a href="#" className="transition-colors hover:text-ink-soft">Privacy</a>
             <a href="#" className="transition-colors hover:text-ink-soft">Terms</a>
           </div>

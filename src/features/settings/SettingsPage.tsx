@@ -227,7 +227,7 @@ export function SettingsPage() {
                           ? `Next charge ${format(new Date(billing.nextBillingAt), "MMM d, yyyy")} · ${formatCurrency(billing.price ?? 0)}/${billing.currency ?? "USD"}`
                           : profile.plan === "free"
                             ? "Unlimited Vault, 1 platform, basic insights."
-                            : "Charges are handled by Payoneer."}
+                            : "Billing is handled securely."}
                       </p>
                     </div>
                   </div>
@@ -236,7 +236,7 @@ export function SettingsPage() {
                       Upgrade to Premium
                     </Button>
                   ) : (
-                    <Button variant="outline">Manage via Payoneer</Button>
+                    <Button variant="outline">Manage billing</Button>
                   )}
                 </div>
               </Card>
