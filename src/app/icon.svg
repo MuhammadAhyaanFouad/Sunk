@@ -1,13 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <rect width="24" height="24" rx="6" fill="#39FF6A"/>
+  <rect width="24" height="24" rx="6" fill="#0A0A0A"/>
   <text
-    x="12"
-    y="17.4"
-    text-anchor="middle"
+    x="11.6"
+    y="17.2"
     font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
     font-size="15"
     font-weight="900"
+    fill="#EDEDED"
     letter-spacing="-0.5"
-    fill="#0A0A0A"
-  >S<tspan fill="#0A0A0A">.</tspan></text>
+  >S<tspan fill="#39FF6A">.</tspan></text>
 </svg>
