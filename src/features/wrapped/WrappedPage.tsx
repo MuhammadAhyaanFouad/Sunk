@@ -9,6 +9,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { PlatformIcon } from "@/components/ui/PlatformIcon";
+import { MarqueeText } from "@/components/ui/MarqueeText";
 import { AnimatedNumber } from "@/components/motion/AnimatedNumber";
 import { DonutChart } from "@/components/charts/DonutChart";
 import { SkeletonCard } from "@/components/ui/Skeleton";
@@ -215,7 +216,7 @@ export function WrappedPage() {
                     <span className="w-6 shrink-0 text-center font-mono text-[13px] font-bold text-ink-faint">{i + 1}</span>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center justify-between gap-3">
-                        <p className="truncate text-[14px] font-semibold text-ink">{g.title}</p>
+                        <MarqueeText className="text-[14px] font-semibold text-ink">{g.title}</MarqueeText>
                         <p className="shrink-0 font-mono text-[13px] font-semibold text-ink-soft tabular">{formatCurrency(g.amount)}</p>
                       </div>
                       <div className="mt-1.5 h-1 overflow-hidden rounded-full bg-white/[0.05]">
@@ -282,7 +283,7 @@ export function WrappedPage() {
               >
                 <div className="min-w-0">
                   <p className="text-[11px] text-ink-faint">{row.label}</p>
-                  <p className="truncate text-[14px] font-semibold text-ink">{row.value}</p>
+                  <MarqueeText className="text-[14px] font-semibold text-ink">{row.value}</MarqueeText>
                 </div>
                 {row.sub && <p className="shrink-0 font-mono text-[13px] font-semibold text-ink-soft tabular">{row.sub}</p>}
               </motion.div>

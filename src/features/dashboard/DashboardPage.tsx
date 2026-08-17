@@ -454,7 +454,7 @@ export function DashboardPage() {
                   aria-hidden
                 />
                 <div className="min-w-0 flex-1">
-                  <p className="truncate text-[13px] font-medium text-ink">{p.title}</p>
+                  <MarqueeText className="text-[13px] font-medium text-ink">{p.title}</MarqueeText>
                   <p className="text-[11.5px] text-ink-faint">
                     {timeAgo(p.purchasedAt)} · {CATEGORY_META[p.category].label}
                   </p>
