@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/Card";
 import { Avatar } from "@/components/ui/Avatar";
 import { Badge } from "@/components/ui/Badge";
 import { SkeletonCard } from "@/components/ui/Skeleton";
+import { MarqueeText } from "@/components/ui/MarqueeText";
 import { Stagger, FadeIn } from "@/components/motion/FadeIn";
 import { useLeaderboard, useProfile } from "@/hooks/use-data";
 import { useApp } from "@/context/app-context";
@@ -100,9 +101,9 @@ export function LeaderboardsPage() {
                   <Avatar name={e.displayName} src={e.avatarUrl} size="sm" />
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2">
-                      <p className={cn("truncate text-[14px] font-semibold", isYou ? "text-primary" : "text-ink")}>
+                      <MarqueeText className={cn("text-[14px] font-semibold", isYou ? "text-primary" : "text-ink")}>
                         {e.displayName}
-                      </p>
+                      </MarqueeText>
                       {isYou && <Badge variant="primary">You</Badge>}
                     </div>
                     <p className="text-[11.5px] text-ink-faint">@{e.username} · Lv {e.level}</p>

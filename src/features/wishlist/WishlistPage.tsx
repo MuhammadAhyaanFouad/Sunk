@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { PlatformIcon } from "@/components/ui/PlatformIcon";
+import { MarqueeText } from "@/components/ui/MarqueeText";
 import { SkeletonCard } from "@/components/ui/Skeleton";
 import { Stagger, FadeIn } from "@/components/motion/FadeIn";
 import { useWishlist, useAddWishlistItem, useRemoveWishlistItem } from "@/hooks/use-data";
@@ -92,7 +93,7 @@ export function WishlistPage() {
                     </div>
                   </div>
                   <div className="p-3.5">
-                    <p className="truncate text-[13.5px] font-semibold text-ink">{w.title}</p>
+                    <MarqueeText className="text-[13.5px] font-semibold text-ink">{w.title}</MarqueeText>
                     <div className="mt-1 flex items-center justify-between">
                       <p className="font-mono text-[13px] font-semibold text-ink tabular">
                         {current != null ? formatCurrency(current) : "—"}

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Input } from "@/components/ui/Input";
 import { Avatar } from "@/components/ui/Avatar";
+import { MarqueeText } from "@/components/ui/MarqueeText";
 import { PlatformIcon } from "@/components/ui/PlatformIcon";
 import { SkeletonCard } from "@/components/ui/Skeleton";
 import { Stagger, FadeIn } from "@/components/motion/FadeIn";
@@ -74,7 +75,7 @@ export function FriendsPage() {
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-2">
-                        <p className="truncate text-[14px] font-semibold text-ink">{f.displayName}</p>
+                        <MarqueeText className="text-[14px] font-semibold text-ink">{f.displayName}</MarqueeText>
                         <span className="text-[11px] text-ink-faint">@{f.username}</span>
                       </div>
                       <div className="mt-0.5 flex items-center gap-3 text-[12px] text-ink-muted">
@@ -127,7 +128,7 @@ export function FriendsPage() {
                     {g.avatarUrl ? <PlatformIcon platform={g.avatarUrl as never} size="md" /> : "👥"}
                   </div>
                   <div className="min-w-0">
-                    <p className="truncate text-[13.5px] font-semibold text-ink">{g.name}</p>
+                    <MarqueeText className="text-[13.5px] font-semibold text-ink">{g.name}</MarqueeText>
                     <p className="text-[11.5px] text-ink-faint">{g.memberCount} members</p>
                   </div>
                 </div>

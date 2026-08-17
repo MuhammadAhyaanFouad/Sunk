@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Select } from "@/components/ui/Select";
 import { SkeletonCard } from "@/components/ui/Skeleton";
 import { PlatformIcon } from "@/components/ui/PlatformIcon";
+import { MarqueeText } from "@/components/ui/MarqueeText";
 import { AnimatedNumber } from "@/components/motion/AnimatedNumber";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { useGames } from "@/hooks/use-data";
@@ -149,7 +150,7 @@ export function LibraryPage() {
                     </div>
                   </div>
                   <div className="p-3.5">
-                    <p className="truncate text-[13.5px] font-semibold text-ink">{g.title}</p>
+                    <MarqueeText className="text-[13.5px] font-semibold text-ink">{g.title}</MarqueeText>
                     <p className="mt-0.5 text-[11.5px] text-ink-faint">
                       {g.playtimeHours}h played · {formatCurrency(g.totalSpend)}
                     </p>

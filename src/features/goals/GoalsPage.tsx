@@ -8,6 +8,7 @@ import { Target, PiggyBank, Clock, Ban, Sparkles, Plus, CheckCircle2, Flag } fro
 import { format } from "date-fns";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
+import { MarqueeText } from "@/components/ui/MarqueeText";
 import { Badge } from "@/components/ui/Badge";
 import { Progress } from "@/components/ui/Progress";
 import { Dialog } from "@/components/ui/Dialog";
@@ -105,7 +106,7 @@ export function GoalsPage() {
                   </span>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center justify-between gap-2">
-                      <p className="truncate text-[14.5px] font-semibold text-ink">{g.title}</p>
+                      <MarqueeText className="text-[14.5px] font-semibold text-ink">{g.title}</MarqueeText>
                       {g.status === "completed" && <Badge variant="primary">Done</Badge>}
                       {g.status === "failed" && <Badge variant="danger">Missed</Badge>}
                     </div>

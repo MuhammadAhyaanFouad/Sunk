@@ -21,6 +21,7 @@ import { MonthlySpendChart } from "@/components/charts/MonthlySpendChart";
 import { DonutChart } from "@/components/charts/DonutChart";
 import { PlatformIcon } from "@/components/ui/PlatformIcon";
 import { Avatar } from "@/components/ui/Avatar";
+import { MarqueeText } from "@/components/ui/MarqueeText";
 import {
   useStats,
   useBudget,
@@ -406,7 +407,7 @@ export function DashboardPage() {
                       aria-hidden
                     />
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-[13px] font-medium text-ink">{p.title}</p>
+                      <MarqueeText className="text-[13px] font-medium text-ink">{p.title}</MarqueeText>
                       <p className="text-[11.5px] text-ink-faint">
                         {PLATFORM_META[p.platform].label} · {formatCurrency(p.amount)}
                       </p>
@@ -480,7 +481,7 @@ export function DashboardPage() {
                   return (
                     <div key={g.id}>
                       <div className="mb-1.5 flex items-center justify-between text-[12.5px]">
-                        <span className="truncate font-medium text-ink">{g.title}</span>
+                        <MarqueeText className="font-medium text-ink">{g.title}</MarqueeText>
                         <span className="ml-2 shrink-0 font-mono text-ink-faint tabular">
                           {goalValue(g)} / {g.unit === "money" ? formatCurrency(g.target) : g.target.toLocaleString()}
                         </span>
@@ -558,7 +559,7 @@ export function DashboardPage() {
                   <div key={s.id} className="flex items-center gap-3 rounded-xl border border-edge bg-surface-raised/50 px-3.5 py-2.5 transition-colors hover:border-edge-strong">
                     {s.platform ? <PlatformIcon platform={s.platform} /> : <RefreshCw className="size-4 text-ink-faint" aria-hidden />}
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-[13px] font-medium text-ink">{s.name}</p>
+                      <MarqueeText className="text-[13px] font-medium text-ink">{s.name}</MarqueeText>
                       <p className="text-[11.5px] text-ink-faint">
                         {isToday ? "Renews today" : formatRelative(s.nextRenewal)}
                       </p>
@@ -585,7 +586,7 @@ export function DashboardPage() {
               <div key={f.id} className="flex items-center gap-3">
                 <Avatar src={f.avatarUrl} name={f.displayName} size="sm" online={f.status === "online"} />
                 <div className="min-w-0 flex-1">
-                  <p className="truncate text-[13px] font-medium text-ink">{f.displayName}</p>
+                      <MarqueeText className="text-[13px] font-medium text-ink">{f.displayName}</MarqueeText>
                   <p className="text-[11.5px] text-ink-faint">
                     {f.status === "online" ? "Online" : timeAgo(f.lastActiveAt ?? new Date().toISOString())}
                   </p>

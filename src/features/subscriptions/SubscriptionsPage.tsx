@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Switch } from "@/components/ui/Switch";
 import { SkeletonCard } from "@/components/ui/Skeleton";
+import { MarqueeText } from "@/components/ui/MarqueeText";
 import { PlatformIcon } from "@/components/ui/PlatformIcon";
 import { AnimatedNumber } from "@/components/motion/AnimatedNumber";
 import { Stagger, FadeIn } from "@/components/motion/FadeIn";
@@ -63,7 +64,7 @@ export function SubscriptionsPage() {
               <p className="mt-4 text-[13px] text-ink-muted">Next renewal</p>
               {nextRenewal ? (
                 <>
-                  <p className="mt-1 truncate text-[17px] font-semibold text-ink">{nextRenewal.name}</p>
+                  <MarqueeText className="mt-1 text-[17px] font-semibold text-ink">{nextRenewal.name}</MarqueeText>
                   <p className="mt-1 text-[12px] text-ink-faint">
                     {isSameDay(new Date(nextRenewal.nextRenewal), new Date())
                       ? "Charging today"
@@ -97,7 +98,7 @@ export function SubscriptionsPage() {
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
-                    <p className="truncate text-[14.5px] font-semibold text-ink">{s.name}</p>
+                    <MarqueeText className="text-[14.5px] font-semibold text-ink">{s.name}</MarqueeText>
                     {s.status !== "active" && (
                       <Badge variant={s.status === "cancelled" ? "neutral" : "warning"}>{s.status}</Badge>
                     )}

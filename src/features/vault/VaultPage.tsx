@@ -15,6 +15,7 @@ import { PlatformIcon } from "@/components/ui/PlatformIcon";
 import { SkeletonCard } from "@/components/ui/Skeleton";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { Dropdown } from "@/components/ui/Dropdown";
+import { MarqueeText } from "@/components/ui/MarqueeText";
 import { AddPurchaseDialog } from "@/features/vault/AddPurchaseDialog";
 import { usePurchases, useDeletePurchase, usePlatforms } from "@/hooks/use-data";
 import type { Purchase } from "@/types";
@@ -157,7 +158,7 @@ export function VaultPage() {
                             </div>
                             <div className="min-w-0 flex-1">
                               <div className="flex items-start justify-between gap-2">
-                                <p className="truncate text-[14px] font-semibold text-ink">{p.title}</p>
+                                <MarqueeText className="text-[14px] font-semibold text-ink">{p.title}</MarqueeText>
                                 <span
                                   className={cn(
                                     "shrink-0 font-mono text-[13px] font-semibold tabular",
