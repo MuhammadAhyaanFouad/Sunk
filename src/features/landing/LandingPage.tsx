@@ -354,7 +354,7 @@ export function LandingPage() {
             <a href="#" className="transition-colors hover:text-ink-soft">Privacy</a>
             <a href="#" className="transition-colors hover:text-ink-soft">Terms</a>
           </div>
-          <p className="text-[12px] text-ink-faint">© {new Date().getFullYear()} {BRAND.name}. All numbers shamefully preserved.</p>
+          <p className="text-[12px] text-ink-faint">© {new Date().getFullYear()}. All numbers shamefully preserved.</p>
         </div>
       </footer>
     </div>
