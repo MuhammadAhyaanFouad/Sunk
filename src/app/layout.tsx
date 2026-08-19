@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${BRAND.name} — ${BRAND.tagline}`,
+    default: BRAND.tagline,
     template: `%s · ${BRAND.name}`,
   },
   description: BRAND.description,
