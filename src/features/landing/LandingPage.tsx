@@ -351,8 +351,9 @@ export function LandingPage() {
           </div>
           <div className="flex items-center gap-6 text-[12.5px] text-ink-faint">
             <span className="flex items-center gap-1.5"><Lock className="size-3.5" /> Payments secured</span>
-            <a href="#" className="transition-colors hover:text-ink-soft">Privacy</a>
-            <a href="#" className="transition-colors hover:text-ink-soft">Terms</a>
+            <Link href="/privacy" className="transition-colors hover:text-ink-soft">Privacy</Link>
+            <Link href="/terms" className="transition-colors hover:text-ink-soft">Terms</Link>
+            <Link href="/refund" className="transition-colors hover:text-ink-soft">Refund</Link>
           </div>
           <p className="text-[12px] text-ink-faint">© {new Date().getFullYear()}. All numbers shamefully preserved.</p>
         </div>
