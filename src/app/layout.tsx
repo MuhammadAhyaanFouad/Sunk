@@ -25,7 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: {
     default: BRAND.tagline,
-    template: `%s | ${BRAND.name}`,
+    template: `${BRAND.name} | %s`,
   },
   description: BRAND.description,
   keywords: ["gaming spend", "tracker", "steam", "roblox", "xbox", "budget", "subscriptions"],
